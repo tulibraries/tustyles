@@ -1,0 +1,127 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 950px
+);
+
+$container-max-widths: (
+  sm: 750px,
+  md: 950px,
+  lg: 1200px
+);
+
+@import "bootstrap";	
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "partials/_vars.scss";
+@import "font-awesome";
+
+.container {
+	max-width: 100%; 
+	@media (min-width: 1200px) {
+    max-width: 1200px;
+    min-width: 1200px;
+	}
+}
+
+html, body {
+	background-color: $white;
+	font-family: "PT Sans";
+	font-size: 16px;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	position: static;
+	overflow: scroll;
+}
+
+#wrapper {
+	min-height: 100%;
+	position: relative;
+	background-color: $white;
+	overflow: hidden;
+}
+h1 {
+	margin-top:14px;
+	font-size: 200%;
+	margin-bottom: 21px;
+}
+h2 {
+	font-size: 175%;
+}
+h3 {
+	font-size: 125%;
+}
+h4,h5,h6 {
+	font-size: 100%;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+	color: $white;
+	font-size:1.10rem;
+}
+.flash {
+	background-color: cornsilk;
+	padding:10px;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 21px;
+	color: green;
+	.error {
+		color: $red;
+	}
+}
+a:not(.dropdown-item) {
+		color: #903;
+	a:active, a:hover, a:visited {
+		color: #903;
+	}
+}
+#content {
+	margin: 0;
+	background-color: $white;
+	padding-bottom: 42px;
+}
+#skip-link {
+	left: 50%;
+  margin-left: -5.25em;
+  margin-top: 0;
+  position: absolute;
+  width: auto;
+  z-index: 50;
+  a, a:visited, a:link {
+  	background: rgba(0,0,0,0.6);
+    color: white;
+    display: block;
+    font-size: 0.94em;
+    line-height: 1.7;
+    padding: 1px 10px 2px 10px;
+    text-decoration: none;
+  }
+}
+.element-invisible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	overflow: hidden;
+	height: 1px;
+}
+
