@@ -13,7 +13,7 @@ GEM
       method_source (~> 1.0)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
-    rake (10.5.0)
+    rake (13.0.1)
 
 PLATFORMS
   ruby
@@ -21,7 +21,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (>= 1.16)
   pry-rails
-  rake (~> 10.0)
+  rake (~> 13.0)
   tustyles!
 
 BUNDLED WITH
